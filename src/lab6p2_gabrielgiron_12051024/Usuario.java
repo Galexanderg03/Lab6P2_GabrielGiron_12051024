@@ -10,34 +10,10 @@ package lab6p2_gabrielgiron_12051024;
  * @author Galex
  */
 public class Usuario {
-    private String Nombre;
-    private String Contra;
     private String Usuario;
-    private String Fecha;
-    private String Apellido;
 
-    public Usuario(String Nombre, String Contra, String Usuario, String Fecha, String Apellido) {
-        this.Nombre = Nombre;
-        this.Contra = Contra;
+    public Usuario(String Usuario) {
         this.Usuario = Usuario;
-        this.Fecha = Fecha;
-        this.Apellido = Apellido;
-    }
-
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-
-    public String getContra() {
-        return Contra;
-    }
-
-    public void setContra(String Contra) {
-        this.Contra = Contra;
     }
 
     public String getUsuario() {
@@ -48,21 +24,9 @@ public class Usuario {
         this.Usuario = Usuario;
     }
 
-    public String getFecha() {
-        return Fecha;
+    @Override
+    public String toString() {
+        return "Usuario{" + "Usuario=" + Usuario + '}';
     }
 
-    public void setFecha(String Fecha) {
-        this.Fecha = Fecha;
-    }
-
-    public String getApellido() {
-        return Apellido;
-    }
-
-    public void setApellido(String Apellido) {
-        this.Apellido = Apellido;
-    }
-    
-    
 }

@@ -11,6 +11,7 @@ import java.util.ArrayList;
  */
 public class LogIn extends javax.swing.JFrame {
     public ArrayList<Usuario> Usuarios = new ArrayList();
+    public ArrayList<Contra> Contra = new ArrayList();
     
     /**
      * Creates new form LogIn
@@ -55,6 +56,11 @@ public class LogIn extends javax.swing.JFrame {
         jLabel3.setText("Contraseña");
 
         jButton1.setText("Ingresar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Registrarse");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -127,9 +133,16 @@ public class LogIn extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
         Registro R = new Registro();
         R.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        InterfazUsuario I = new InterfazUsuario();
+        I.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
