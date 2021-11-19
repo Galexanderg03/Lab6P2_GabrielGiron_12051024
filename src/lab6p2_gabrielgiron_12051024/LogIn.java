@@ -11,7 +11,6 @@ import java.util.ArrayList;
  */
 public class LogIn extends javax.swing.JFrame {
     public ArrayList<Usuario> Usuarios = new ArrayList();
-    
     /**
      * Creates new form LogIn
      */
@@ -141,16 +140,20 @@ public class LogIn extends javax.swing.JFrame {
         // TODO add your handling code here:
         String Usa =  TextUser.getText();
         String Contra = TextContra.getText();
-        
-        for(int i = 0; i <= Usuarios.size(); i++)
+        System.out.println(Usa+"  "+Contra);
+        int i = 0;
+        for(i = 0; i < Usuarios.size(); i++)
         {
             Usuario user = Usuarios.get(i);
-            String User = user.getNombre();
+            String User = user.getUsuario();
             String Pass = user.getContra();
+            System.out.println(User+"  "+Pass);
             if(User.equals(Usa) && Pass.equals(Contra))
             {
                 this.setVisible(false);
                 InterfazUsuario I = new InterfazUsuario();
+                I.user = User;
+                System.out.println(I.user);
                 I.setVisible(true);
                 break;
             }
