@@ -30,11 +30,21 @@ public class Lab6P2_GabrielGiron_12051024 {
         String A2 = "Martinez";
         String F2 = "27/10/2004";
         
-        Usuario U = new Usuario(Usuario, Contra, Name, Apellido, Fecha);
+        //PokeGrupo
+        String Nombre = "Citadel";
+        
+        Usuario User = new Usuario(Usuario, Contra, Name, Apellido, Fecha);
+        System.out.println(User.toString());
         Usuario User2 = new Usuario(U2,C2,N2,A2,F2);
+        PokeGrupo P = new PokeGrupo(Nombre);
+        
+        P.Usuarios.add(User);
+        P.Usuarios.add(User2);
+        InterfazUsuario I = new InterfazUsuario();
+        I.pokeGrupos.add(P);
         
         LogIn L = new LogIn();
-        L.Usuarios.add(U);
+        L.Usuarios.add(User);
         L.Usuarios.add(User2);
         L.setVisible(true);
     }

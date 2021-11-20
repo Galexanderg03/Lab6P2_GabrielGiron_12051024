@@ -11,6 +11,7 @@ import java.util.ArrayList;
  */
 public class LogIn extends javax.swing.JFrame {
     public ArrayList<Usuario> Usuarios = new ArrayList();
+    public String GlobalUser;
     /**
      * Creates new form LogIn
      */
@@ -150,10 +151,9 @@ public class LogIn extends javax.swing.JFrame {
             System.out.println(User+"  "+Pass);
             if(User.equals(Usa) && Pass.equals(Contra))
             {
+                GlobalUser = User;
                 this.setVisible(false);
                 InterfazUsuario I = new InterfazUsuario();
-                I.user = User;
-                System.out.println(I.user);
                 I.setVisible(true);
                 break;
             }
@@ -163,7 +163,10 @@ public class LogIn extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    public String getUser()
+    {
+        return GlobalUser;
+    }
     /**
      * @param args the command line arguments
      */
